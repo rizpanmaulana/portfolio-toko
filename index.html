@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PanX Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PanX Store</h1>
+        <p>Belanja mudah, harga bersahabat.</p>
+    </header>
+
+    <main>
+
+        <section class="produk">
+            <h2>Produk Kami</h2>
+            
+<div class="wadah-pencarian">
+    <input
+        type="text"
+        id="pencarian"
+        placeholder="Cari produk..."
+    >
+
+    <button
+        type="button"
+        id="hapus-pencarian"
+        aria-label="Hapus pencarian"
+        hidden
+    >×</button>
+</div>
+
+        <p id="jumlah-produk"></p>    
+<select id="urutan-harga">
+    <option value="default">Urutan produk</option>
+    <option value="termurah">Harga termurah</option>
+    <option value="termahal">Harga termahal</option>
+</select>
+            
+<select id="filter-kategori">
+    <option value="semua">Semua kategori</option>
+    <option value="Pakaian">Pakaian</option>
+    <option value="Alas kaki">Alas kaki</option>
+    <option value="Aksesori">Aksesori</option>
+</select>
+
+            
+<section class="keranjang">
+    <h2>Keranjang Belanja</h2>
+    <p>Jumlah barang: <span id="jumlah-keranjang">0</span></p>
+    <p>Total belanja: <span id="total-belanja">Rp0</span></p>
+    
+<p id="keranjang-kosong">
+    Keranjang masih kosong. Yuk, pilih produk!
+</p>
+
+<ul id="daftar-keranjang"></ul>
+    
+<button id="checkout-wa" type="button">
+    Checkout via WhatsApp
+</button>
+    
+<button id="kosongkan-keranjang" type="button">
+    Kosongkan Keranjang
+</button>
+</section>
+            <div id="daftar-produk">
+                <!-- Produk akan muncul dari JavaScript -->
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
